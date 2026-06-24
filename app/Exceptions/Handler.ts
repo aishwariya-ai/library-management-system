@@ -13,7 +13,7 @@ export default class ExceptionHandler extends HttpExceptionHandler {
     ctx: HttpContextContract
   ) {
 
-    //Validation Errors
+    
     if (error.code === 'E_VALIDATION_FAILURE') {
 
       return ctx.response.status(422).send({
@@ -23,7 +23,7 @@ export default class ExceptionHandler extends HttpExceptionHandler {
       })
     }
 console.log(error.code)
-    //Resource Not Found
+    
     if (error.code === 'E_ROW_NOT_FOUND') {
 
       return ctx.response.status(404).send({
@@ -32,7 +32,7 @@ console.log(error.code)
       })
     }
 
-    //Invalid JWT
+    
     if (error.name === 'JsonWebTokenError') {
 
       return ctx.response.status(401).send({
@@ -41,7 +41,7 @@ console.log(error.code)
       })
     }
 
-    //Expired JWT
+    
     if (error.name === 'TokenExpiredError') {
 
       return ctx.response.status(401).send({
