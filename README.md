@@ -55,6 +55,10 @@ This project provides functionalities for managing authors, books, and library m
 
 * Automatic password hashing using Model Hooks
 
+### Pagination
+
+*Added pagination for Authors,books and members module.
+
 ### Exception Handling
 
 * Global Exception Handling
